@@ -1,0 +1,8 @@
+catboost
+lightgbm
+joblib
+optuna
+streamlit
+markupsafe
+zenml
+mlflow
