@@ -28,16 +28,16 @@ def evaluate_model(
         prediction = model.predict(X_test)
         mse_class = MSE()
         mse = mse_class.calculate_score(y_test, prediction)
-        mlflow.log_metrics("mse", mse)
+        mlflow.log_metric("mse", mse)
         
         rmse_class = RMSE()
         rmse = rmse_class.calculate_score(y_test, prediction)
-        mlflow.log_metrics("rmse", rmse)
+        mlflow.log_metric("rmse", rmse)
         print(f"RMSE : {rmse}")
         
         r2_class = R2()
         r2 = r2_class.calculate_score(y_test, prediction)
-        mlflow.log_metrics("r2", r2)
+        mlflow.log_metric("r2", r2)
         print(f"R2 : {r2}")
         
         return r2, rmse
